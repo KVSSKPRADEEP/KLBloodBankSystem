@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, intial-scale=2.0">
+<link rel="stylesheet" ahref="mystyle.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #1084;
+}
+
+.header h2 {
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+<pre><h1>
+</h1></pre>
+<center>
+<div class="section1">
+
+
+
+<div class="video-container">
+
+	<div class="color-overlay"></div>
+
+	<video autoplay loop muted>
+
+ 	<source src="TP.mp4"  type="video/mp4"> 
+  
+	</video>
+</div>
+<div id="content">
+
+</center>
+8000
+
+<div class="header">
+  <h2>KLEF CEA BLOOD BANK</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  <h3>KLEF CEA BLOOD BANK</h3>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+</script>
+
+
+<h2>ABOUT</h2>
+
+<p>Account :</p>
+
+<a class="active" href="#home">Home</a>
+<button type="button" class="collapsible">Information</button>
+
+<a class="active" href="#home">Home</a>
+<button type="button" class="collapsible">Profile</button>
+
+<a class="active" href="#home">Home</a>
+
+
+<button type="button" class="collapsible">LogOut</button>
+
+</div>
+
+<h1> KLEF CEA BLOOD BANK</h1>
+<center>
+
+<legend>BLOOD BANK REGISTRATION</legend>
+		
+<table border="13" cellpadding="25px" >
+
+<tr>
+<td > 
+
+<form action="" method="post">
+{% csrf_token %}
+Your Name:
+</td>180060010 && 180050087
+<td>
+<input type="text" id="name" name="name" placeholder="First name" maxlength="100">
+</td>
+</tr>
+
+<tr>
+<td>
+Blood Group:==>
+</td>
+<td>
+<select id="blood_group" name="blood_group">
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+Email:
+</td>
+<td>
+<input type="email" name="email" id="email" placeholder="Your mail ID" maxlength="100">
+</td>
+
+
+</tr>
+
+
+<tr>
+<td>
+State:
+</td>
+<td>
+<input type="text" name="state" id="state" placeholder="Your STATE" maxlength="100">
+</td>
+
+
+</tr>
+
+
+<tr>
+<td>
+City:
+</td>
+<td>
+<input type="text" name="city" id="city" placeholder="Your CITY" maxlength="100">
+</td>
+
+
+</tr>
+
+
+<tr>
+<td>
+Pick Telephone no:
+</td>
+<td>
+<input type="tel" name="phone" id="phone" placeholder="number please"
+</td>
+</tr>
+
+<tr>
+<td>
+Choose Age:
+</td>
+<td>
+<input type="number" name="age" id="age" min="16" max="60" >
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+Choose option:
+</td>
+<td>
+<input type="radio" name="gender" value="Male">Male<br>
+<input type="radio" name="gender" value="Female">Female
+</td>
+</tr>
+
+
+<tr>
+<td>
+<input type="Submit" value="Regster">
+</td>
+<td>
+<input type="Reset">
+</tr>
+</td></form>
+</center>
+</table>
+
+
+
+</div>
+
+
+</div>
+<button type="button" class="collapsible">NEED BLOOD CHECK OUT THE AVAILABILITIES..
+
+<div class="topnav">
+  
+
+  <input type="text" placeholder="Search.."><br>
+<input type="Submit" value="SEARCH">
+</div>
+</button>
+<div>
+  <table border="2" cellspacing="20" cellpadding="20">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Blood Group</th>
+      <th>State</th>
+      <th>city</th>
+      <th>gender</th>
+    </tr>
+    {% for registeration in registerations  %}
+    <tr>
+      <td>{{registeration.name}}</td>
+      <td>{{registeration.email}}</td>
+      <td>{{registeration.phone}}</td>
+      <td>{{registeration.blood_group}}</td>
+      <td>{{registeration.state}}</td>
+      <td>{{registeration.city}}</td>
+      <td>{{registeration.gender}}</td>
+      
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+</html>
+     
